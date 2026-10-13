@@ -1,0 +1,7 @@
+node_modules
+dist
+storybook-static
+.nx/cache
+.nx/workspace-data
+*.log
+.DS_Store

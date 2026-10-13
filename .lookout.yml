@@ -1,0 +1,36 @@
+# Lookout (github.com/sammalloy/lookout) visual tests for the design system.
+# Build first: npx nx run storybook:build  (writes preview-stats.json for onlyChanged)
+server: http://localhost:4400
+baseBranch: main
+autoAcceptOnBaseBranch: true
+
+projects:
+  - name: design-system
+    storybook: apps/storybook/storybook-static
+
+modes:
+  viewports:
+    - { name: desktop, width: 1280, height: 800 }
+  themes: [light, dark]
+  themeGlobal: theme
+
+diffThreshold: 0.1
+concurrency: 4
+
+onlyChanged:
+  enabled: true
+  fullRebuildOn:
+    - "**/package.json"
+    - "package-lock.json"
+    - "libs/tokens/src/tokens.json"
+    - ".lookout.yml"
+
+reviewers:
+  default: ["@design-system"]
+  groups:
+    design-system: [sammalloy]
+
+approval:
+  minimum: 1
+  perRule: true
+  dismissOnNewChanges: true

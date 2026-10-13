@@ -1,0 +1,7 @@
+/* Tells Tailwind to scan @backoffice/blocks. Import after @backoffice/ui:
+
+     @import "tailwindcss";
+     @import "@backoffice/ui/styles.css";
+     @import "@backoffice/blocks/styles.css";
+*/
+@source "./";

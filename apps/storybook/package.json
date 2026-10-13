@@ -1,0 +1,27 @@
+{
+  "name": "@backoffice/storybook",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build --stats-json -o storybook-static",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "nx": {
+    "name": "storybook",
+    "targets": {
+      "build": {
+        "outputs": [
+          "{projectRoot}/storybook-static"
+        ]
+      }
+    }
+  },
+  "dependencies": {
+    "@backoffice/blocks": "0.1.0",
+    "@backoffice/tokens": "0.1.0",
+    "@backoffice/ui": "0.1.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  }
+}

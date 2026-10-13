@@ -1,0 +1,12 @@
+/* Styles for @backoffice/ui. In your app's main stylesheet:
+
+     @import "tailwindcss";
+     @import "@backoffice/ui/styles.css";
+
+   This brings in the design tokens and Tailwind theme, the animation utilities,
+   and tells Tailwind to scan this package for the classes its components use. */
+@import "tw-animate-css";
+@import "@backoffice/tokens/theme.css";
+@import "./shadcn.css";
+
+@source "./";

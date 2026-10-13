@@ -1,0 +1,42 @@
+{
+  "name": "@backoffice/tokens",
+  "version": "0.1.0",
+  "description": "Back Office design tokens: CSS variables, a Tailwind v4 theme, and a JS object.",
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist",
+    "src/tokens.json"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./tokens.css": "./dist/tokens.css",
+    "./theme.css": "./dist/theme.css",
+    "./tokens.json": "./dist/tokens.json"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "nx": {
+    "name": "tokens",
+    "targets": {
+      "build": {
+        "inputs": [
+          "{projectRoot}/src/**/*",
+          "{projectRoot}/scripts/**/*"
+        ]
+      }
+    }
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "license": "UNLICENSED"
+}

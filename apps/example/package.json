@@ -1,0 +1,26 @@
+{
+  "name": "@backoffice/example",
+  "private": true,
+  "type": "module",
+  "description": "A small Back Office app built only from the published @backoffice packages.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "nx": {
+    "name": "example",
+    "targets": {
+      "dev": { "dependsOn": ["^build"] }
+    }
+  },
+  "dependencies": {
+    "@backoffice/blocks": "0.1.0",
+    "@backoffice/ui": "0.1.0",
+    "lucide-react": "0.474.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "sonner": "^2.0.0"
+  }
+}

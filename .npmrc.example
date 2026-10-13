@@ -1,0 +1,3 @@
+# Copy to .npmrc (or set in Jenkins) to publish @backoffice/* to Nexus.
+@backoffice:registry=https://nexus.example.com/repository/npm-internal/
+//nexus.example.com/repository/npm-internal/:_auth=${NEXUS_NPM_AUTH}

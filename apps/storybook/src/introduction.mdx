@@ -1,0 +1,36 @@
+import { Meta } from "@storybook/addon-docs/blocks"
+
+<Meta title="Introduction" />
+
+# Back Office design system
+
+React components and page blocks for the Back Office suite of apps. Built on
+[shadcn/ui](https://ui.shadcn.com) (copied in as source we own), Radix primitives
+and Tailwind CSS v4, themed by design tokens.
+
+| Package | What it is |
+| --- | --- |
+| `@backoffice/tokens` | Design tokens: CSS variables, a Tailwind theme, and a JS object |
+| `@backoffice/ui` | Components: Button, Dialog, Sidebar, Data table parts, Form, Chart and more |
+| `@backoffice/blocks` | Page-level blocks (dashboard, sidebars, login, signup) and charts |
+
+## Using it in an app
+
+```bash
+npm install @backoffice/ui @backoffice/blocks tailwindcss @tailwindcss/vite
+```
+
+```css
+/* src/index.css */
+@import "tailwindcss";
+@import "@backoffice/ui/styles.css";
+@import "@backoffice/blocks/styles.css";
+```
+
+```tsx
+import { Button } from "@backoffice/ui/button"
+import { Dashboard01 } from "@backoffice/blocks/dashboard-01"
+```
+
+Dark mode is the `dark` class (or `data-theme="dark"`) on any ancestor, usually `<html>`.
+Use the **Theme** button in the toolbar to switch here.

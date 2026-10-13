@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "@backoffice/ui/styles.css";
+@import "@backoffice/blocks/styles.css";
+
+/* Stories render on the theme background so dark mode screenshots are complete. */
+html,
+body,
+#storybook-root {
+  background: var(--background);
+}
